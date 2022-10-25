@@ -1,21 +1,24 @@
 let valueEl = Number(document.querySelector('#value').textContent);
 let counterValue = document.querySelector('#value');
-const BtnAdd =  document.querySelector('#counter').firstElementChild;
- console.log(BtnAdd)
- const BtnRemove =  document.querySelector('#counter').lastElementChild;
+const BtnRemove =  document.querySelector('#counter').firstElementChild;
  console.log(BtnRemove)
-BtnRemove.addEventListener('click', () => {
+ const BtnAdd =  document.querySelector('#counter').lastElementChild;
+ console.log(BtnAdd)
+
+ BtnRemove.addEventListener('click', () => {
+  counterValue.innerText =valueEl ;
+  valueEl -= 1;
+  
+   });
+  
+BtnAdd.addEventListener('click', () => {
+  counterValue.innerText = valueEl;
+          valueEl += 1;
         
-          valueEl -= 1;
-        
-          counterValue.innerText = valueEl;
+          
     
         });
         
 
-        BtnAdd.addEventListener('click', () => {
-          valueEl += 1;
-          counterValue.innerText =valueEl ;
-           });
-          
+        
         
