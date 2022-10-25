@@ -6,17 +6,17 @@ const BtnRemove =  document.querySelector('#counter').firstElementChild;
  console.log(BtnAdd)
 
  BtnRemove.addEventListener('click', () => {
-  counterValue.innerText =valueEl ;
+  
   valueEl -= 1;
+  counterValue.innerText =valueEl ;
   
    });
   
 BtnAdd.addEventListener('click', () => {
-  counterValue.innerText = valueEl;
+  
           valueEl += 1;
+          counterValue.innerText = valueEl;
         
-          
-    
         });
         
 

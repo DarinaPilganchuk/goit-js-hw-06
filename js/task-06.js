@@ -1,11 +1,11 @@
 
-document.getElementById("validation-input").onblur = function() {
-    console.log(this.value.length);
-    if (this.getAttribute('data-length') < this.value.length) { 
-      this.classList.remove('valid');
-      this.classList.add('invalid');
-    } else {
-      this.classList.remove('invalid');
-      this.classList.add('valid');
-    }
-  };
+
+  const inputEl = document.querySelector('#validation-input');
+  console.log(inputEl)
+inputEl.addEventListener('blur', () => {
+  if (inputEl.value.length === Number(inputEl.getAttribute('data-length'))) {
+    return inputEl.classList.add('valid'), inputEl.classList.remove('invalid');
+    
+  }
+  return inputEl.classList.add('invalid');
+});
